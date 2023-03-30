@@ -1,0 +1,41 @@
+
+fun main() {
+    helloWorld()
+    
+    println(add(4,5))
+}
+
+//1. 함수
+
+//무엇을 리턴하든
+// Unit (=void, 생략가능)
+fun helloWorld() : Unit{
+    println("Hello, world!!!")
+}
+
+// 매개변수 -> 변수명: 자료형(대문자로 시작)
+fun add(a : Int, b: Int) : Int {
+    return a+b
+}
+
+
+//2. val vs var
+// val = value -> 상수(바뀌지않는)
+// var = variable -> 변수(바뀌는)
+fun hi(){
+    
+    // 기본 문법
+    val a : Int = 10
+    var b: Int = 9
+    var e: String //선언만
+    
+    //error : a = 100 
+    b = 100
+    println(b)
+    
+    //자료형 생략 가능 (자동추론)
+    val c = 100 
+    var d = 100
+    var name = "ddaisy"
+    
+}
