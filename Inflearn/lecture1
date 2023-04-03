@@ -1,8 +1,6 @@
-
 fun main() {
-    helloWorld()
-    
-    println(add(4,5))
+    //helloWorld()
+    checkNum(1)
 }
 
 //1. 함수
@@ -39,3 +37,49 @@ fun hi(){
     var name = "ddaisy"
     
 }
+
+//3. String Template
+fun stringTemplate(){
+    val name = "Joyce"
+    val lastName = "Hong"
+    println("my name is ${name + lastName}") //${name} = $name
+    
+    println("is this true? ${1==0}")
+    println("this is \$a")
+}
+
+//4. 조건식
+fun maxBy(a:Int, b: Int) : Int {
+    if(a>b){
+        return a
+    }else{
+        return b
+    }
+}
+
+fun maxBy2(a:Int, b: Int) = if(a>b) a else b //삼항연산자 대신
+
+fun checkNum(score:Int){
+    when(score){
+        0 -> println("this is 0")
+        1 -> println("this is 0")
+        2,3 -> println("this is 0")
+        else -> println("")
+    }
+    
+    var b = when(score){
+        1 -> 1
+        2 -> 2
+        else -> 3
+    }
+    
+    println("b: ${b}")
+    
+    when(score){
+        in 90..100 -> println("You are genius")
+        in 10..80 -> println("not bad")
+        else -> println("okay")
+    }
+}
+
+// Ex
